@@ -22,7 +22,8 @@ var httpsServer = https.createServer(credentials, app);
 
 app.get("/api", (req, res) => {
     console.log("got request");
-  res.json({ message: "Hello from API server!" });
+    var message = req.query.message;
+    res.json({ message: "Hello " + message + " from API server!" });
 });
 
 httpsServer.listen(SSL_PORT, () => { console.log(`API server listening on port ${SSL_PORT} (https)`)});

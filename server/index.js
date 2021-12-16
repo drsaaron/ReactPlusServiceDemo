@@ -34,7 +34,7 @@ app.get("/api", (req, res) => {
 	cert: certificate,
 	key: privateKey
     });
-    axios.get(API_HOST + ":" + API_PORT + "/api", {httpsAgent})
+    axios.get(API_HOST + ":" + API_PORT + "/api", {httpsAgent, params: { message: "my message" }})
 	.then(response => {
 	    console.log("response = " + Object.keys(response));
 	    return res.json(response.data);

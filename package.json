@@ -1,6 +1,6 @@
 {
   "name": "reactplusservicedemo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "demo of a react app with backend services, see https://www.freecodecamp.org/news/how-to-create-a-react-app-with-a-node-backend-the-complete-guide/",
   "main": "index.js",
   "scripts": {
