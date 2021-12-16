@@ -1,19 +1,19 @@
 {
   "name": "reactplusservicedemo",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "demo of a react app with backend services, see https://www.freecodecamp.org/news/how-to-create-a-react-app-with-a-node-backend-the-complete-guide/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node server/index.js",
-      "build": "cd client && npm install && npm run build"
+    "start": "node server/index.js",
+    "startAPI": "node apiserver/index.js",
+    "build": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.24.0",
     "express": "^4.17.1"
-  },
-
-    "description": "demo of a react app with backend services, see https://www.freecodecamp.org/news/how-to-create-a-react-app-with-a-node-backend-the-complete-guide/"
+  }
 }
