@@ -3,9 +3,11 @@
 const path = require('path');
 const express = require("express");
 const axios = require('axios');
+const config = require('config');
 
-const PORT = process.env.PORT || 3001;
-const API_PORT = process.env.API_PORT || 3002;
+const PORT = config.get('SERVER_PORT');
+const API_PORT = config.get('API_PORT');
+const API_HOST = config.get('API_HOST');
 
 const app = express();
 
@@ -15,7 +17,7 @@ app.use(express.static(path.resolve(__dirname, '../client/build')));
 app.get("/api", (req, res) => {
     // call the API server
     //  res.json({ message: "Hello from server!" });
-    axios.get("http://localhost:" + API_PORT + "/api")
+    axios.get(API_HOST + ":" + API_PORT + "/api")
 	.then(response => {
 	    console.log("response = " + Object.keys(response));
 	    return res.json(response.data);
