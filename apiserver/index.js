@@ -26,4 +26,9 @@ app.get("/api", (req, res) => {
     res.json({ message: "Hello " + message + " from API server!" });
 });
 
+app.get("/api/person/:personId", (req, res) => {
+    var personId = req.params.personId;
+    res.json({ message: "got personID " + personId });
+});
+
 httpsServer.listen(SSL_PORT, () => { console.log(`API server listening on port ${SSL_PORT} (https)`)});
