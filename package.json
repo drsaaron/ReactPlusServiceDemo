@@ -1,6 +1,6 @@
 {
   "name": "reactplusservicedemo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "demo of a react app with backend services, see https://www.freecodecamp.org/news/how-to-create-a-react-app-with-a-node-backend-the-complete-guide/",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,9 @@
   "dependencies": {
     "axios": "^0.24.0",
     "config": "^3.3.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0"
   }
 }
